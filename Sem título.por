@@ -1,25 +1,29 @@
 programa {
   funcao inicio() {
-  //declaracao de variaveis
-  real numero_1,numero_2,numero_3
+  //Declaracao de variaveis
+  real kg_morango,kg_maca,preco_maca,preco_morango
+  real total_sem_desconto,total_com_desconto
+  real desconto,valor_a_pagar
 
-  //solicitacao de dados
-  escreva("digite o primeiro numero:")
-  leia(numero_1)
-  escreva("digite o segundo numero:")
-  leia(numero_2)
-  escreva("digite o terceiro numero:")
-  leia(numero_3)
+  //Solicitacao de dados ao usuario
+  escreva("Digite a quantidde em kg de morango:")
+  leia(kg_morango)
+  escreva("Digite a qauntidade em kg de maca:")
+  leia(kg_maca)
 
-  //calculando
-  se(numero_1>numero_2 e numero_1>numero_3){escreva ("\no primeiro numero é o maior de todos os numeros")}
-  se(numero_2>numero_1 e numero_2>numero_3){escreva ("\no segundo numero é maior de todos os numeros")}
-  se (numero_3>numero_1 e numero_3>numero_2){escreva("\no terceiro numero é o maior de todos os numeros")}
-  se (numero_1==numero_2 e numero_3==numero_2 e numero_1==numero_3){escreva ("os numeros são iguais")}
+  //Calculando
+  se (kg_morango<=5){escreva ("\npreço do morango=2.50")}
+   senao {escreva("\npreço do morango=2.20")}
+  se (kg_maca<=5){escreva ("\npreço da maçã=1.80")}
+   senao{escreva("\npreço da maçã=1.50")}
   
+  desconto=o.10
+  total_sem_desconto=(kg_morango*preco_morango) + (kg_maca+preco_maca)
+  se ((kg_morango +kg_maca >8) ou (total_sem_desconto >25.00)) *desconto
+   
 
-  //mostrando dados ao usuario
-
+  //Mostrando dados ao usuario
+  
     
   }
 }
